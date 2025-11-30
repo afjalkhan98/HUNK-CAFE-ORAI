@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -135,6 +135,221 @@
             <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Juicy Burger" class="img-fluid w-100"></div>
             <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Decadent Sweets" class="img-fluid w-100"></div>
             <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Steaming Maggi" class="img-fluid w-100"></div>
+            <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1553909488-df9a2d8dc26b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crispy Sandwich" class="img-fluid w-100"></div>
+            <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1571934811376-b879e1d3213d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Refreshing Cold Drink" class="img-fluid w-100"></div>
+            <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Coconut Water" class="img-fluid w-100"></div>
+            <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Exotic Hookah Setup" class="img-fluid w-100"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-light">Menu - Order Online</h2>
+            <div class="row" id="foodContainer">
+                <div class="col-lg-6">
+                    <h3 class="text-center mb-4 fw-semibold">Food Delights</h3>
+                    <!-- Food items will be rendered here -->
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="text-center mb-4 fw-semibold">Refreshing Drinks</h3>
+                    <!-- Drinks items will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hookah Section -->
+    <section id="hookah" class="hookah-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-light">Premium Hookah Flavors</h2>
+            <div class="row" id="hookahContainer">
+                <!-- Hookah items will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-light">Book a Table</h2>
+            <form id="bookingForm">
+                <div class="row g-3">
+                    <div class="col-md-6"><input type="text" class="form-control" id="bookName" placeholder="Your Name" required></div>
+                    <div class="col-md-6"><input type="email" class="form-control" id="bookEmail" placeholder="Your Email" required></div>
+                    <div class="col-md-4"><input type="date" class="form-control" id="bookDate" required></div>
+                    <div class="col-md-4"><input type="time" class="form-control" id="bookTime" required></div>
+                    <div class="col-md-4"><input type="number" class="form-control" id="bookGuests" placeholder="Number of Guests" min="1" required></div>
+                    <div class="col-12"><textarea class="form-control" id="bookRequests" rows="3" placeholder="Special Requests"></textarea></div>
+                    <div class="col-12"><button type="submit" class="btn btn-warning w-100">Book Now</button></div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-light">Our Location</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="locationDetails">
+                        <p class="fw-medium" id="address"><i class="fas fa-map-marker-alt me-2"></i> 4th Floor, Ganesh Plaza, Ajit Mill Cross Road, Rakhial, Ahmedabad</p>
+                        <p id="phone"><i class="fas fa-phone me-2"></i> +91 98987 02437</p>
+                        <p id="email"><i class="fas fa-envelope me-2"></i> info@hunkcafe.com</p>
+                        <p id="hours">Hours: 9AM - 12AM Daily</p>
+                    </div>
+                    <div class="location-edit">
+                        <h5>Edit Location Details</h5>
+                        <textarea id="edit-address" placeholder="Address" rows="2"></textarea>
+                        <input type="tel" id="edit-phone" placeholder="Phone">
+                        <input type="email" id="edit-email" placeholder="Email">
+                        <textarea id="edit-hours" placeholder="Hours" rows="1"></textarea>
+                        <button class="btn btn-primary save-btn" onclick="saveLocationEdit()">Save Changes</button>
+                    </div>
+                    <a href="https://maps.app.goo.gl/6CvnyGkMLQQwcg6Q8" target="_blank" class="btn btn-primary mt-2">Get Directions</a>
+                </div>
+                <div class="col-md-6">
+                    <iframe id="map" src="https://www.google.com/maps/embed/v1/place?q=4th+Floor%2C+Ganesh+Plaza%2C+Ajit+Mill+Cross+Road%2C+Rakhial%2C+Ahmedabad&key=" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems"></div>
+                    <hr>
+                    <p class="cart-total text-end mb-0">Total: ₹<span id="cartTotal">0</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal fade" id="adminModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Admin Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="adminForm">
+                        <div class="mb-3"><input type="text" class="form-control" id="username" placeholder="Username" required></div>
+                        <div class="mb-3"><input type="password" class="form-control" id="password" placeholder="Password" required></div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="change-pass-section" id="changePassSection">
+                        <h6>Change Password</h6>
+                        <input type="password" id="new-password" placeholder="New Password">
+                        <input type="password" id="confirm-password" placeholder="Confirm New Password">
+                        <button class="btn btn-secondary w-100 mt-2" onclick="changePassword()">Update Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div id="orderToast" class="toast align-items-center text-white bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body"><i class="fas fa-check me-2"></i>Your order has been received. We'll prepare it fresh!</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+        <div id="bookingToast" class="toast align-items-center text-white bg-info border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body"><i class="fas fa-calendar-check me-2"></i>Table booked successfully! We'll confirm via email.</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hunk Cafe. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: #ffcccb;"></i> for epic foodies.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS Script - Replace with your IDs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS - REPLACE THESE WITH YOUR IDs
+        emailjs.init("1DFHqP53utvFr3vHW");
+        const SERVICE_ID = "YOUR_SERVICE_ID"; // e.g., "service_def456"
+        const ORDER_TEMPLATE_ID = "YOUR_ORDER_TEMPLATE_ID"; // e.g., "template_ghi789"
+        const BOOKING_TEMPLATE_ID = "YOUR_BOOKING_TEMPLATE_ID"; // e.g., "template_jkl012"
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Site Data
+        let siteData = JSON.parse(localStorage.getItem('siteData')) || {
+            location: {
+                address: '4th Floor, Ganesh Plaza, Ajit Mill Cross Road, Rakhial, Ahmedabad',
+                phone: '+91 98987 02437',
+                email: 'info@hunkcafe.com',
+                hours: 'Hours: 9AM - 12AM Daily'
+            },
+            adminPassword: 'hunk123' // Default password
+        };
+
+        // Menu Data
+        let menuData = JSON.parse(localStorage.getItem('menuData')) || {
+            food: [
+                { id: 1, name: 'Margherita Pizza', price: 199, img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 2, name: 'Classic Burger', price: 149, img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 3, name: 'Chocolate Brownie', price: 89, img: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 4, name: 'Spicy Maggi', price: 69, img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 5, name: 'Grilled Cheese Sandwich', price: 109, img: 'https://images.unsplash.com/photo-1553909488-df9a2d8dc26b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }
+            ],
+            drinks: [
+                { id: 6, name: 'Chilled Cola', price: 49, img: 'https://images.unsplash.com/photo-1571934811376-b879e1d3213d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 7, name: 'Fresh Coconut Water', price: 59, img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }
+            ],
+            hookah: [
+                { id: 8, name: 'Paan', price: 299, img: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 9, name: 'Mint', price: 249, img: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 10, name: 'Dubai Mix', price: 349, img: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
+                { id: 11, name: 'Magai Paan', price: 299, img: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }
+            ]
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+
+        // Render Functions
+        function renderMenu() {
+            const foodContainer = document.querySelector('#foodContainer .col-lg-6:first-child');
+            foodContainer.innerHTML = '<h3 class="text-center mb-4 fw-semibold">Food Delights</h3>' + menuData.food.map(item => createMenuCard(item, 'food')).join('');
+
+            const drinksContainer = document.querySelector('#foodContainer .col-lg-6:last-child');
+            drinksContainer.innerHTML = '<h3 class="text-center mb-4 fw-semibold">Refreshing Drinks</h3>' + menuData.drinks.map(item => createMenuCard(item, 'drinks')).join('');
+
+            const hookahContainer = document.getElementById('hookahContainer');
+            hookahContainer.innerHTML = menuData.hookah.map(item => createMenuCard(item, 'hookah', true)).join('');
+        }
+
+        function createMenuCard(item, category, center = false) {
+            const colClass = center ? 'col-md-3' : 'col-12';
+            const align = center ? 'text-center' : '';
+            return `
+                <div class="${colClass}">
+                    <div class="menu-card ${align}">
+                        <button class="edit-btn            <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Steaming Maggi" class="img-fluid w-100"></div>
             <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1553909488-df9a2d8dc26b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crispy Sandwich" class="img-fluid w-100"></div>
             <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1571934811376-b879e1d3213d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Refreshing Cold Drink" class="img-fluid w-100"></div>
             <div class="col-md-3 col-sm-6"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Coconut Water" class="img-fluid w-100"></div>
